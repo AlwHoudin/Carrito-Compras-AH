@@ -1,0 +1,23 @@
+  .producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .producto h3 {
+    margin: 0;
+  }
+
+  .producto p {
+    margin: 0;
+  }
+
+  #carrito {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  #carrito h2 {
+    margin-top: 0;
+  }
