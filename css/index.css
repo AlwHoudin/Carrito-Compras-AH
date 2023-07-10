@@ -1,23 +1,103 @@
-  .producto {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
 
-  .producto h3 {
-    margin: 0;
-  }
+h1 {
+  text-align: center;
+  color: #333;
+}
 
-  .producto p {
-    margin: 0;
-  }
+#productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  #carrito {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 20px;
-  }
+.producto {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  #carrito h2 {
-    margin-top: 0;
-  }
+.card {
+  text-align: center;
+}
+
+.card h1 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.agregar-carrito {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.agregar-carrito:hover {
+  background-color: #0056b3;
+}
+
+#items {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#items li {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#items li button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#items li button:hover {
+  background-color: #b02a37;
+}
+
+#total {
+  text-align: right;
+  margin-top: 20px;
+  color: #333;
+  font-size: 18px;
+}
+
+#vaciar {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#vaciar:hover {
+  background-color: #49545c;
+}
