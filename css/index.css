@@ -42,6 +42,13 @@ h1 {
   margin-bottom: 8px;
 }
 
+.card img {
+  width: 100px; /* Tamaño deseado de la imagen */
+  height: 100px; /* Tamaño deseado de la imagen */
+  object-fit: cover; /* Ajustar imagen sin deformar */
+  border-radius: 8px;
+}
+
 .agregar-carrito {
   background-color: #007bff;
   color: #fff;

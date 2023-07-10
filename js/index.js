@@ -22,6 +22,7 @@ function iniciarCarrito() {
       <div class='card'>
         <h3>${producto.id}</h3>
         <h1>${producto.nombre}</h1>
+        <img src="${producto.imagen}" alt="${producto.nombre}">
         <p>${producto.precio}</p>
         <input type="number" min="1" value="1" id="cantidad-${producto.id}">
         <button class="agregar-carrito">Agregar al carrito</button>

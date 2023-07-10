@@ -1,12 +1,55 @@
 [
-  { "id": 1, "nombre": "Pantalón", "precio": 10 },
-  { "id": 2, "nombre": "Remera", "precio": 15 },
-  { "id": 3, "nombre": "Camisa", "precio": 20 },
-  { "id": 4, "nombre": "Zapatos", "precio": 50 },
-  { "id": 5, "nombre": "Bufanda", "precio": 12 },
-  { "id": 6, "nombre": "Gorra", "precio": 18 },
-  { "id": 7, "nombre": "Chaqueta", "precio": 60 },
-  { "id": 8, "nombre": "Calcetines", "precio": 8 },
-  { "id": 9, "nombre": "Vestido", "precio": 35 },
-  { "id": 10, "nombre": "Bolso", "precio": 25 }
+  {
+    "id": 1,
+    "nombre": "Pantalón",
+    "precio": 10,
+    "imagen": "./src/img/pantalon.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Remera",
+    "precio": 15,
+    "imagen": "./src/img/remera.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Camisa",
+    "precio": 20,
+    "imagen": "./src/img/camisa.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Zapatos",
+    "precio": 30,
+    "imagen": "./src/img/zapato.jpg"  },
+  {
+    "id": 5,
+    "nombre": "Bufanda",
+    "precio": 25,
+    "imagen": "./src/img/bufanda.jpg"  },
+  {
+    "id": 6,
+    "nombre": "Gorra",
+    "precio": 12,
+    "imagen": "./src/img/gorra.jpg"  },
+  {
+    "id": 7,
+    "nombre": "Chaqueta",
+    "precio": 40,
+    "imagen": "./src/img/chaqueta.jpg"  },
+  {
+    "id": 8,
+    "nombre": "Calcetines",
+    "precio": 8,
+    "imagen": "./src/img/calcetines.jpg"  },
+  {
+    "id": 9,
+    "nombre": "Vestido",
+    "precio": 50,
+    "imagen": "./src/img/vestido.jpg"  },
+  {
+    "id": 10,
+    "nombre": "Bolso",
+    "precio": 30,
+    "imagen": "./src/img/bolso.jpg"  }
 ]
