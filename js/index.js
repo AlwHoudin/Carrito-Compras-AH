@@ -42,6 +42,13 @@ function iniciarCarrito() {
 
   const vaciarButton = document.getElementById('vaciar');
   vaciarButton.addEventListener('click', vaciarCarrito);
+
+  // Cargar carrito del Local Storage, si existe
+  const carritoData = localStorage.getItem('carrito');
+  if (carritoData) {
+    carrito = JSON.parse(carritoData);
+    actualizarCarrito();
+  }
 }
 
 function agregarAlCarrito(id, cantidad) {
@@ -54,6 +61,7 @@ function agregarAlCarrito(id, cantidad) {
       carrito.push({ ...producto, cantidad });
     }
     actualizarCarrito();
+    guardarCarritoEnLocalStorage();
   }
 }
 
@@ -65,12 +73,14 @@ function quitarDelCarrito(index) {
       carrito.splice(index, 1);
     }
     actualizarCarrito();
+    guardarCarritoEnLocalStorage();
   }
 }
 
 function vaciarCarrito() {
   carrito = [];
   actualizarCarrito();
+  guardarCarritoEnLocalStorage();
 }
 
 function actualizarCarrito() {
@@ -98,4 +108,8 @@ function actualizarCarrito() {
 
   const totalElement = document.getElementById('total');
   totalElement.textContent = `Total: $${total}`;
+}
+
+function guardarCarritoEnLocalStorage() {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
 }
