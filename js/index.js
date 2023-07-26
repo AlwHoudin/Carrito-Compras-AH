@@ -43,7 +43,7 @@ function iniciarCarrito() {
   const vaciarButton = document.getElementById('vaciar');
   vaciarButton.addEventListener('click', vaciarCarrito);
 
-  // Cargar carrito del Local Storage, si existe
+  
   const carritoData = localStorage.getItem('carrito');
   if (carritoData) {
     carrito = JSON.parse(carritoData);
@@ -95,12 +95,19 @@ function actualizarCarrito() {
     li.textContent = `${producto.nombre} - $${producto.precio} - Cantidad: ${producto.cantidad}`;
 
     const quitarButton = document.createElement('button');
-    quitarButton.textContent = 'Quitar';
+    quitarButton.textContent = '-';
     quitarButton.addEventListener('click', () => {
       quitarDelCarrito(i);
     });
 
+    const agregarButton = document.createElement('button');
+    agregarButton.textContent = '+';
+    agregarButton.addEventListener('click', () => {
+      agregarAlCarrito(producto.id, 1);
+    });
+
     li.appendChild(quitarButton);
+    li.appendChild(agregarButton);
     carritoElement.appendChild(li);
 
     total += producto.precio * producto.cantidad;
@@ -108,6 +115,32 @@ function actualizarCarrito() {
 
   const totalElement = document.getElementById('total');
   totalElement.textContent = `Total: $${total}`;
+}
+
+const pagarButton = document.getElementById('pagar');
+pagarButton.addEventListener('click', mostrarModal);
+
+function mostrarModal() {
+  const modalContainer = document.createElement('div');
+  modalContainer.classList.add('modal-container');
+
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('modal-content');
+  modalContent.innerHTML = `
+    <h2>¡Gracias por tu compra!</h2>
+    <!-- Puedes agregar más contenido al modal si lo deseas -->
+    <button class="modal-close" onclick="ocultarModal()">Cerrar</button>
+  `;
+
+  modalContainer.appendChild(modalContent);
+  document.body.appendChild(modalContainer);
+}
+
+function ocultarModal() {
+  const modalContainer = document.querySelector('.modal-container');
+  if (modalContainer) {
+    document.body.removeChild(modalContainer);
+  }
 }
 
 function guardarCarritoEnLocalStorage() {
