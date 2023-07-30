@@ -117,8 +117,27 @@ function actualizarCarrito() {
   totalElement.textContent = `Total: $${total}`;
 }
 
+function pagarCarrito() {
+  // Mostrar una ventana emergente de confirmación
+  Swal.fire({
+    title: '¿Estás seguro de pagar?',
+    text: '¡Gracias por tu compra!',
+    icon: 'success',
+    showCancelButton: true,
+    confirmButtonColor: '#007bff',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Sí, pagar',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Aquí puedes agregar la lógica para procesar el pago o realizar cualquier otra acción necesaria al confirmar el pago.
+      vaciarCarrito(); // Por ejemplo, vaciar el carrito después de confirmar el pago.
+    }
+  });
+}
+
 const pagarButton = document.getElementById('pagar');
-pagarButton.addEventListener('click', mostrarModal);
+pagarButton.addEventListener('click', pagarCarrito);
 
 function mostrarModal() {
   const modalContainer = document.createElement('div');
@@ -129,8 +148,7 @@ function mostrarModal() {
   modalContent.innerHTML = `
     <h2>¡Gracias por tu compra!</h2>
     <!-- Puedes agregar más contenido al modal si lo deseas -->
-    <button class="modal-close" onclick="ocultarModal()">Cerrar</button>
-  `;
+    <button class="modal-close" onclick="ocultarModal()">Cerrar</button>`;
 
   modalContainer.appendChild(modalContent);
   document.body.appendChild(modalContainer);
